@@ -1,7 +1,12 @@
 <div *ngIf="hero">
 
   <h2>{{hero.name | uppercase}} Details</h2>
+  <p>The hero's birthday is {{ birthday | date:'MMM d, y,' }}</p>
+  <p>
+    Super Hero Power: {{power | exponentialStrength: factor}}
+</p>
   <div><span>id: </span>{{hero.id}}</div>
+
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
